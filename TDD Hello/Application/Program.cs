@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Application.Library;
+using System;
 
 namespace Application
 {
@@ -6,7 +7,14 @@ namespace Application
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Arrange
+            string name = null;
+
+            // Act
+            var text = Greeter.Greet(name);
+
+            // Assert
+            Console.WriteLine(text);
         }
     }
 }
