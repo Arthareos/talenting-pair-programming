@@ -32,7 +32,34 @@ namespace Application.Library
                 return text;
             }
 
+            if(lowercaseNames.Count > 0 && uppercaseNames.Count > 0)
+            {
+                var text = "Hello";
+
+                foreach (var name in lowercaseNames) text += ", " + name;
+
+                text = AddLastAnd(text, false);
+
+                return text = text + AddUppercaseNames(uppercaseNames) + "!";
+
+            }
+
             return "Not implemented yet";
+        }
+
+        public static string AddUppercaseNames(List<string> uppercaseNames)
+        {
+            string text = " AND HELLO ";
+
+            foreach(var name in uppercaseNames)
+            {
+                text = text + $"{name}, ";
+            }
+
+            text = text.Remove(text.Length - 2);
+
+            return text;
+
         }
 
         public static string AddLastAnd(string text, bool uppercase)
