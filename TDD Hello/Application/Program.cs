@@ -1,11 +1,11 @@
-﻿using Application.Library;
-using System;
+﻿using System;
+using Application.Library;
 
 namespace Application
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Arrange
             string name = null;

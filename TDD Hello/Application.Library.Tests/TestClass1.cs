@@ -1,5 +1,4 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Application.Library.Tests
 {
@@ -10,7 +9,7 @@ namespace Application.Library.Tests
         public void GreetOneNameTest()
         {
             // Arrange
-            string name = "Alina";
+            var name = "Alina";
 
             // Act
             var text = Greeter.Greet(name);
@@ -36,7 +35,7 @@ namespace Application.Library.Tests
         public void GreetShoutingNameTest()
         {
             // Arrange
-            string name = "MARIA";
+            var name = "MARIA";
 
             // Act
             var text = Greeter.Greet(name);
@@ -62,20 +61,20 @@ namespace Application.Library.Tests
         public void GreetMultipleNamesTest()
         {
             // Arrange
-            string[] name = { "Marius", "Vali", "Ana" };
+            string[] name = {"Marius", "Vali", "Ana"};
 
             // Act
             var text = Greeter.Greet(name);
 
             // Assert
-            Assert.That(text, Is.EqualTo("Hello, Marius, Vali, and Ana."));
+            Assert.That(text, Is.EqualTo("Hello, Marius, Vali and Ana."));
         }
 
         [Test]
         public void GreetMixedTest()
         {
             // Arrange
-            string[] names = { "Ana", "MARIA", "George" };
+            string[] names = {"Ana", "MARIA", "George"};
 
             // Act
             var text = Greeter.Greet(names);
