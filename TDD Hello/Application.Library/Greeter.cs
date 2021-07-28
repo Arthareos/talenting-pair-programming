@@ -8,8 +8,10 @@ namespace Application.Library
         {
             if (names[0] == null) return "Hello, my friend.";
 
-            var lowercaseNames = SeparatorLowerCase(names);
-            var uppercaseNames = SeparatorUpperCase(names);
+            var list = ManipulateVector(names);
+
+            var lowercaseNames = SeparatorLowerCase(list);
+            var uppercaseNames = SeparatorUpperCase(list);
 
             if (names.Length == 1)
             {
@@ -32,7 +34,7 @@ namespace Application.Library
                 return text;
             }
 
-            if(lowercaseNames.Count > 0 && uppercaseNames.Count > 0)
+            if (lowercaseNames.Count > 0 && uppercaseNames.Count > 0)
             {
                 var text = "Hello";
 
@@ -41,25 +43,41 @@ namespace Application.Library
                 text = AddLastAnd(text, false);
 
                 return text = text + AddUppercaseNames(uppercaseNames) + "!";
-
             }
 
             return "Not implemented yet";
         }
 
+        public static List<string> ManipulateVector(string[] names)
+        {
+            List<string> list = new();
+
+            foreach (var name in names)
+            {
+                if (name.Contains(","))
+                {
+                    var nameSplit = name.Split(", ");
+
+                    foreach (var item in nameSplit) list.Add(item);
+
+                    continue;
+                }
+
+                list.Add(name);
+            }
+
+            return list;
+        }
+
         public static string AddUppercaseNames(List<string> uppercaseNames)
         {
-            string text = " AND HELLO ";
+            var text = " AND HELLO ";
 
-            foreach(var name in uppercaseNames)
-            {
-                text = text + $"{name}, ";
-            }
+            foreach (var name in uppercaseNames) text = text + $"{name}, ";
 
             text = text.Remove(text.Length - 2);
 
             return text;
-
         }
 
         public static string AddLastAnd(string text, bool uppercase)
@@ -76,7 +94,7 @@ namespace Application.Library
             return text;
         }
 
-        public static List<string> SeparatorLowerCase(string[] names)
+        public static List<string> SeparatorLowerCase(List<string> names)
         {
             List<string> lowercaseNames = new();
 
@@ -87,7 +105,7 @@ namespace Application.Library
             return lowercaseNames;
         }
 
-        public static List<string> SeparatorUpperCase(string[] names)
+        public static List<string> SeparatorUpperCase(List<string> names)
         {
             List<string> uppercaseNames = new();
 

@@ -82,5 +82,18 @@ namespace Application.Library.Tests
             // Assert
             Assert.That(text, Is.EqualTo("Hello, Ana and George. AND HELLO MARIA!"));
         }
+
+        [Test]
+        public void GreetCommaTest()
+        {
+            // Arrange
+            string[] names = {"Victor", "Elena, Dan"};
+
+            // Act
+            var text = Greeter.Greet(names);
+
+            // Assert
+            Assert.That(text, Is.EqualTo("Hello, Victor, Elena and Dan."));
+        }
     }
 }
