@@ -6,13 +6,15 @@ namespace Application.Library
     {
         public static string Greet(params string[] names)
         {
+            // No name
             if (names[0] == null) return "Hello, my friend.";
 
+            // Splits the names string[] into a List<string>
             var list = ManipulateVector(names);
-
             var lowercaseNames = SeparatorLowerCase(list);
             var uppercaseNames = SeparatorUpperCase(list);
 
+            // Only one name
             if (names.Length == 1)
             {
                 if (uppercaseNames.Contains(names[0])) return $"HELLO, {names[0]}!";
@@ -20,30 +22,16 @@ namespace Application.Library
                 return $"Hello, {names[0]}.";
             }
 
+            // Only 2 lowercase names
             if (lowercaseNames.Count == 2 && uppercaseNames.Count == 0)
                 return $"Hello, {lowercaseNames[0]} and {lowercaseNames[1]}.";
 
-            if (lowercaseNames.Count > 0 && uppercaseNames.Count == 0)
-            {
-                var text = "Hello";
+            // All lowercase
+            if (lowercaseNames.Count > 0 && uppercaseNames.Count == 0) return AddLowercaseNames(lowercaseNames);
 
-                foreach (var name in lowercaseNames) text += ", " + name;
-
-                text = AddLastAnd(text, false);
-
-                return text;
-            }
-
+            // Mixed case
             if (lowercaseNames.Count > 0 && uppercaseNames.Count > 0)
-            {
-                var text = "Hello";
-
-                foreach (var name in lowercaseNames) text += ", " + name;
-
-                text = AddLastAnd(text, false);
-
-                return text = text + AddUppercaseNames(uppercaseNames) + "!";
-            }
+                return AddLowercaseNames(lowercaseNames) + AddUppercaseNames(uppercaseNames);
 
             return "Not implemented yet";
         }
@@ -69,6 +57,17 @@ namespace Application.Library
             return list;
         }
 
+        public static string AddLowercaseNames(List<string> lowercaseNames)
+        {
+            var text = "Hello";
+
+            foreach (var name in lowercaseNames) text += ", " + name;
+
+            text = AddLastAnd(text, false);
+
+            return text;
+        }
+
         public static string AddUppercaseNames(List<string> uppercaseNames)
         {
             var text = " AND HELLO ";
@@ -77,7 +76,7 @@ namespace Application.Library
 
             text = text.Remove(text.Length - 2);
 
-            return text;
+            return text + "!";
         }
 
         public static string AddLastAnd(string text, bool uppercase)
