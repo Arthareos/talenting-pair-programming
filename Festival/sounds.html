@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Transilvania Neon Festival</title>
+    <title>Kronstadt Music Festival</title>
 
     <meta name="description" content="Database for People Power employees.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <link rel="icon" type="image/png" href="./src/favicon.png" />
-    <link rel="stylesheet" href="./src/sounds.css" type="text/css">
+    <link rel="stylesheet" href="./src/style.css" type="text/css">
 </head>
 
 <body>
@@ -31,10 +31,10 @@
     <!-- Navbar -->
     <nav class="d-flex flex-row-reverse float-end" id="nav">
         <div class="title mx-3 d-flex align-items-center">kmf</div>
-        <div class="navHeaders mx-3 d-flex align-items-center"><a href="./index.html">HOME</a></div>
-        <div class="navHeaders mx-3 d-flex align-items-center"><a href="./artists.html">ARTISTS</a></div>
-        <div class="navHeaders mx-3 d-flex align-items-center"><a href="./podcasts.html">PODCASTS</a></div>
-        <div class="navHeaders mx-3 d-flex align-items-center">
+        <div class="subtitle mx-3 d-flex align-items-center"><a href="./index.html">HOME</a></div>
+        <div class="subtitle mx-3 d-flex align-items-center"><a href="./artists.html">ARTISTS</a></div>
+        <div class="subtitle mx-3 d-flex align-items-center"><a href="./podcasts.html">PODCASTS</a></div>
+        <div class="subtitle mx-3 d-flex align-items-center">
             <a id="btn_top" href="javascript:;" onclick="return topFunction()">RETURN TO TOP</a>
         </div>
     </nav>
@@ -46,12 +46,12 @@
         <div id="jumbo" class="card">
             <div id="content">
                 <h1 class="title">street sounds</h1>
-                <p class="navHeaders">ALL THE STREET SOUNDS, CURATED BY LOCAL ARTISTS.</p>
+                <p class="subtitle">ALL THE STREET SOUNDS, CURATED BY LOCAL ARTISTS.</p>
             </div>
         </div>
 
-        <!-- Artist section -->
-        <div id="artists" class="section mt-4">
+        <!-- Sounds section -->
+        <div id="sounds" class="section mt-4">
             <div id="content">
                 <div id="sounds_container" class="d-flex flex-wrap""></div>
             </div>
@@ -61,9 +61,6 @@
         <nav id="footer" class="navbar navbar-light section my-5 p-0" style="opacity: .75;">
             <div class="container-fluid p-0">
                 <p class="footer m-0">&copy; KMF Team @ Talenting Software 2021</p>
-                <!-- <form class="d-flex">
-                    <img id="logo_featuring_bottom" class="d-block" src="./src/logo_featuring.png" alt="">
-                </form> -->
             </div>
         </nav>
 

@@ -1,3 +1,11 @@
+#artists .card-title {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 56px;
+    color: #D5F200;
+}
+
+/* to be deleted */
+
 body {
     padding: 0px 32px 0px 32px;
     background-color: #050505;
@@ -63,7 +71,6 @@ h5.title {
 
 #nav {
     position: fixed;
-    /* top: 937px; */
     top: 100%;
     z-index: 99;
 
@@ -71,8 +78,6 @@ h5.title {
 
     transform-origin: top left;
     transform: rotate(-90deg);
-
-    /* background-color: white; */
 }
 
 #btn_top.show {
@@ -147,6 +152,10 @@ h5.title {
     }
 }
 
+#sounds img {
+    width: 100%;
+}
+
 .artists_container {
     background-color: transparent;
     width: 100%;
@@ -188,10 +197,6 @@ h5.title {
 }
 
 .artist-photo {
-    /* position: absolute;
-    z-index: 1;
-    top: calc(50% - 10px);
-    right: 16px; */
     float: right;
 
     width: 60%;
