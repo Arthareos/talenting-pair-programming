@@ -161,12 +161,18 @@ h5.title {
     left: 32px;
     top: 32px;
     z-index: 2;
+<<<<<<< Updated upstream
 
     padding: 16px;
 
     font-family: 'Major Mono Display', monospace;
     font-size: 64px;
     color: #D5F200;
+=======
+    width: 60%;
+    background-color:rgba(19,19,19,0.9);
+    color: white;
+>>>>>>> Stashed changes
 }
 
 .artist-quote {
