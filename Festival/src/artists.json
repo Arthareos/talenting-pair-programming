@@ -8,5 +8,25 @@
       "name": "MICHAEL JACKSON",
       "image": "michael_jackson.jpg",
       "description": "When Mihaita Piticu called me, I knew that i had to come to this incredible festival. I can't wait to finish my stage performance so I can go chill with my manelisti brothers"
+    },
+    {
+      "name": "AVICII",
+      "image": "avicii.jpg",
+      "description": "One day you'll leave this world behind, so live a life you will remember"
+    },
+    {
+      "name": "DAVID GUETTA",
+      "image": "david_guetta.jpg",
+      "description": "I don't do this for the money, I don't do it for record sales, I don't really care about that, I just want to make beats."
+    },
+    {
+      "name": "GORGON CITY",
+      "image": "gorgon_city.jpg",
+      "description": "We all go through changes, run to different places, That doesn't mean that we have to part, And when you feel like nobody's on your side, Please believe I'm never too far"
+    },
+    {
+      "name": "MEDUZA",
+      "image": "meduza.jpg",
+      "description": "In the fading light, hearts collide, Shadows dance in the distance, Something just ain't right, I'm cold inside, Help me find what I'm missing"
     }
   ]
