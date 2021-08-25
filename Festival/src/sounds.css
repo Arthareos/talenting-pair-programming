@@ -84,11 +84,18 @@ h5.title {
     position: relative;
     z-index: 2;
 
-    width:100%;
+    width: 100%;
     padding-left: 84px;
     margin: 0px;
 
     background-color: transparent;
+}
+
+.artist_container p {
+    position: relative;
+    z-index: 1;
+    top: calc(50% - 10px);
+    right: 16px;
 }
 
 #jumbo {

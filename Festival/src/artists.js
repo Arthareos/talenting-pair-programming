@@ -25,13 +25,15 @@ $(document).ready(function () {
 
         $.each(data, function(i, item) {
 
-            var playlist = '<div class="col-4"><div class="card bg-dark text-white h-100"><a href=\"' +
-                    item.link + '"><img src="./src/img/sounds/' + item.image + '">'
-                    '</a></div></div>';
+            var playlist = '<div class="card text-white mb-3" style="background-color: transparent;"><div class="card-img">' +
+            '<img src="./src/img/artists/' + item.image + '" class="rounded float-end" alt="" style="width: 60%;">' +
+            '</div><div class="card-img-overlay">' +
+            '<h5 class="card-title artist-name">' + item.name + '</h5>' +
+            '<p class="card-text artist-quote">' + item.description + '</p></div></div>';
 
             vector.push(playlist);
         });
 
-        $('#sounds_container').append(vector);
+        $('#container').append(vector);
     });
 });
