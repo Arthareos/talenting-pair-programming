@@ -115,7 +115,7 @@
                     <button data-order="vip-ticket">Buy Now</button>
                 </div>
                 <div class="ticket">
-                    <img src="./src/img/tickets/vip-ticket.jpg" alt="Standard Ticket" />
+                    <img src="./src/img/tickets/standard-ticket.jpg" alt="Standard Ticket" />
                     <div class="columns">
                         <div class="titlet">Standard Ticket</div>
                         <div class="price">$70</div>
@@ -124,7 +124,7 @@
                     <button data-order="standard-ticket">Buy Now</button>
                 </div>
                 <div class="ticket">
-                    <img src="./src/img/tickets/vip-ticket.jpg" alt="OneArtist Ticket" />
+                    <img src="./src/img/tickets/oneartist-ticket.jpg" alt="OneArtist Ticket" />
                     <div class="columns">
                         <div class="titlet">OneArtist Ticket</div>
                         <div class="price">$30</div>
@@ -208,5 +208,29 @@
     crossorigin="anonymous"></script>
 <script src="./src/scroll-top-script.js"></script>
 <script src="./src/dark-mode-switch.js"></script>
+<script>
+    window.addEventListener("DOMContentLoaded", function(e){
+       const orderButtons = document.querySelectorAll("button[data-order]");
 
+       orderButtons.forEach(function(button){
+           button.addEventListener("click", function(e){
+               const button =e.currentTarget;
+               const container = button.parentNode;
+
+               const order ={
+                 id: button.getAttribute("data-order"),
+                 title: container.querySelector(".titlet").innerText,
+                 price: container.querySelector(".price").innerText,
+                 desc: container.querySelector(".desc").innerText
+               };
+               localStorage.setItem("order",JSON.stringify(order));
+
+               const url= window.location.href.replace("index.html","order.html");
+               window.location.href=url;
+           });
+       });
+
+
+    });
+</script>
 </html>
