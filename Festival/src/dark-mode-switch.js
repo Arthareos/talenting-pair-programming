@@ -1,8 +1,3 @@
-/*!
- * Dark Mode Switch v1.0.1 (https://github.com/coliff/dark-mode-switch)
- * Copyright 2021 C.Oliff
- * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
- */
 
 var darkSwitch = document.getElementById("darkSwitch");
 window.addEventListener("load", function () {
@@ -25,16 +20,6 @@ window.addEventListener("load", function () {
  * 'data-theme' attribute will not be set.
  * @return {void}
  */
-// function initTheme() {
-//     var darkThemeSelected =
-//         localStorage.getItem("darkSwitch") !== null &&
-//         localStorage.getItem("darkSwitch") === "dark";
-//     darkSwitch.checked = darkThemeSelected;
-//     darkThemeSelected
-//         ? document.body.setAttribute("data-theme", "dark")
-//         : document.body.removeAttribute("data-theme");
-// }
-
 function initTheme() {
     var darkThemeSelected =
         localStorage.getItem("darkSwitch") !== null &&
