@@ -1,0 +1,20 @@
+[
+  {
+    "name": "MICUTZU",
+    "image": "micutzu.png",
+    "link": "https://open.spotify.com/embed/show/6X1ape0B6eADzJHdz52AhK",
+    "colour": "#006028"
+  },
+  {
+    "name": "GEORGE BUHNICI",
+    "image": "buhnici.png",
+    "link": "https://open.spotify.com/embed/show/18DDse8toSlh5cTQG6MDBh",
+    "colour": "#AA55B1"
+  },
+  {
+    "name": "MIHAI MORAR",
+    "image": "morar.png",
+    "link": "https://open.spotify.com/embed/show/059sh395dgSCd18NBafuEw",
+    "colour": "#2020A8"
+  }
+]

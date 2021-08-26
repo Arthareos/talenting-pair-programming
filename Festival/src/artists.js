@@ -5,8 +5,8 @@ $(document).ready(function () {
 
         $.each(data, function(i, item) {
 
-            var playlist = '<div class="card text-white mb-3" style="background-color: transparent;"><div class="card-img">' +
-            '<img src="./src/img/artists/' + item.image + '" class="rounded float-end" alt="" style="width: 60%;">' +
+            var playlist = '<div class="card text-white mb-3 artist-card"><div class="card-img">' +
+            '<img src="./src/img/artists/' + item.image + '" class="rounded artist-photo" alt="">' +
             '</div><div class="card-img-overlay">' +
             '<h5 class="card-title artist-name">' + item.name + '</h5>' +
             '<p class="card-text artist-quote">' + item.description + '</p></div></div>';
