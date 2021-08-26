@@ -193,3 +193,48 @@ h5.title {
 
     width: 60%;
 }
+.columns{
+    display: flex;
+}
+@media only screen and (min-width: 760px){
+.columns-desktop{
+    display: flex;
+}
+}
+
+.ticket{
+width: 300px;
+padding: 10px;
+margin: 90px;
+background-color: transparent;
+border: solid 1px #D5F200;
+color: #D5F200;
+
+}
+
+.ticket img{
+    width: 100%;
+}
+
+.ticket .titlet{
+    font-weight: bold;
+}
+
+.ticket .columns{
+    width: 100%;
+}
+
+.ticket .price{
+    text-align: right;
+}
+
+.ticket .columns div{
+    width: 50%;
+}
+
+.ticket button{
+    background-color: #D5F200;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 3px;
+}
