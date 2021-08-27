@@ -20,12 +20,11 @@
     <link rel="icon" type="image/png" href="./src/favicon.png" />
     <link rel="stylesheet" href="./src/style.css" type="text/css">
     <style>
+        @media only screen and (min-width: 760px) {
+            article {
+                width: 350px;
+            }
 
-        @media only screen and (min-width: 760px){
-        article{
-            width: 350px;
-        }
-        
         }
     </style>
 </head>
@@ -60,64 +59,64 @@
             </div>
         </div>
 
-       
- <!-- Form section -->
- <article>
-    <h5 class="title">ORDER</h5>
-    <div class="ticket">
-        <img src="" />
-        <div class="columns">
-            <div class="titlet"></div>
-            <div class="price"></div>
-        </div>
-        <p class="desc"></p>
-    </div>
 
-    <form action="http://localhost/post.php" method="POST">
-        <input type="hidden" id="ticket-order" name="ticket-order">
-        <div class="input-group">
-            <div><label for="first-name">First name</label>
-                <div><input type="text" name="first-name" id="first-name" /></div>
-            </div>
-        </div>
-
-        <div class="input-group">
-            <div><label for="last-name">Last name</label>
-                <div><input type="text" name="last-name" id="last-name" /></div>
-            </div>
-        </div>
-
-        <div class="input-group">
-            <div><label for="address">Address</label>
-                <div><input type="text" name="address" id="address" /></div>
-            </div>
-        </div>
-
-        <div class="input-group">
-            <div><label for="state">State</label>
-                <div><input type="text" name="state" id="state" /></div>
-            </div>
-        </div>
-
-        <div class="input-group">
-            <div><label for="postal-code">Postal code</label>
-                <div><input type="text" name="postal-code" id="postal-code" /></div>
-            </div>
-        </div>
-
-
-        <div class="input-group">
-            <div><label for="comments">Comments</label>
-                <div>
-                    <textarea name="comments" id="comments" cols="22" rows="10"></textarea>
+        <!-- Form section -->
+        <article>
+            <h5 class="title">ORDER</h5>
+            <div class="ticket">
+                <img src="" />
+                <div class="columns">
+                    <div class="titlet"></div>
+                    <div class="price"></div>
                 </div>
+                <p class="desc"></p>
             </div>
-        </div>
-        <input type="reset" value="Reset" />
-        <input type="submit" value="Submit" />
 
-    </form>
-</article>
+            <form action="http://localhost/post.php" method="POST">
+                <input type="hidden" id="ticket-order" name="ticket-order">
+                <div class="input-group">
+                    <div><label for="first-name">First name</label>
+                        <div><input type="text" name="first-name" id="first-name" /></div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="last-name">Last name</label>
+                        <div><input type="text" name="last-name" id="last-name" /></div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="address">Address</label>
+                        <div><input type="text" name="address" id="address" /></div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="state">State</label>
+                        <div><input type="text" name="state" id="state" /></div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="postal-code">Postal code</label>
+                        <div><input type="text" name="postal-code" id="postal-code" /></div>
+                    </div>
+                </div>
+
+
+                <div class="input-group">
+                    <div><label for="comments">Comments</label>
+                        <div>
+                            <textarea name="comments" id="comments" cols="22" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <input type="reset" value="Reset" />
+                <input type="submit" value="Submit" />
+
+            </form>
+        </article>
 
         <!-- Footer section -->
         <nav id="footer" class="navbar navbar-light section my-5 p-0" style="opacity: .75;">
@@ -142,36 +141,36 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
-<script src="./src/scroll-top-script.js"></script>
-<script src="./src/dark-mode-switch.js"></script>
+<script src="./src/js/scroll-top-script.js"></script>
+<script src="./src/js/dark-mode-switch.js"></script>
 <script>
-    window.addEventListener("DOMContentLoaded", function(e){
-    
-    const order = localStorage.getItem("order");
-    if(order){
-        const ticketOrder =JSON.parse(order);
-    
-        const orderInput = document.querySelector("#ticket-order");
-        orderInput.value = order;
-    
-        const ticket =document.querySelector(".ticket");
-    
-        const title = ticket.querySelector(".titlet");
-        const price = ticket.querySelector(".price");
-        const desc = ticket.querySelector(".desc");
-    
-    
-        title.innerText = ticketOrder.title;
-        price.innerText = ticketOrder.price;
-        desc.innerText = ticketOrder.desc;
-    
-        const img = ticket.querySelector("img");
-        img.setAttribute("src", `src/img/tickets/${ticketOrder.id}.jpg`);
-        img.setAttribute("alt",ticketOrder.title);
-    }
+    window.addEventListener("DOMContentLoaded", function (e) {
+
+        const order = localStorage.getItem("order");
+        if (order) {
+            const ticketOrder = JSON.parse(order);
+
+            const orderInput = document.querySelector("#ticket-order");
+            orderInput.value = order;
+
+            const ticket = document.querySelector(".ticket");
+
+            const title = ticket.querySelector(".titlet");
+            const price = ticket.querySelector(".price");
+            const desc = ticket.querySelector(".desc");
+
+
+            title.innerText = ticketOrder.title;
+            price.innerText = ticketOrder.price;
+            desc.innerText = ticketOrder.desc;
+
+            const img = ticket.querySelector("img");
+            img.setAttribute("src", `src/img/tickets/${ticketOrder.id}.jpg`);
+            img.setAttribute("alt", ticketOrder.title);
+        }
     });
-    
-    
-    </script>
-    
+
+
+</script>
+
 </html>
