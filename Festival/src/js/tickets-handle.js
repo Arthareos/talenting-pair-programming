@@ -9,13 +9,6 @@ modal.addEventListener('show.bs.modal', function (event) {
   var modal_title = modal.querySelector('#modal-title');
 
   modal_title.textContent = 'Buy ' + title;
-
-
-//   var modalTitle = modal.querySelector('.modal-title')
-//   var modalBodyInput = modal.querySelector('.modal-body input')
-
-//   modalTitle.textContent = 'New message to ' + recipient
-//   modalBodyInput.value = recipient
 })
 
 $('#input_dob').datepicker({
